@@ -7,12 +7,51 @@ class Banda {
     void generarIntegrantes()
     string afinarInstrumentos()
     string tocarInstrumentos()
-    void asignarInstrumentos()
+}
+
+interface Instrumento {
+  void afinarInstrumento()
+}
+
+class InstrumentoCuerda {
+  nombreInstrumento : string
+
+  void afinarInstrumento()
+}
+
+class InstrumentoViento {
+  nombreInstrumento : string
+
+  void afinarInstrumento()
+}
+
+class InstrumentoPercusion {
+  nombreInstrumento : string
+
+  void afinarInstrumento()
+}
+
+class InstrumentoElectrico{
+  nombreInstrumento : string
+
+  void afinarInstrumento()
+}
+
+class Musico {
+  Nombre : string
+  instrumentoAsignado : Instrumento
+
+  void asignacionInstrumento()
+  void tocarInstrumento()
 }
 
 
-
-
+Banda o-- Musico
+Musico *-- Instrumento
+Instrumento <|.. InstrumentoCuerda
+Instrumento <|.. InstrumentoViento
+Instrumento <|.. InstrumentoPercusion
+Instrumento <|.. InstrumentoElectrico
 
 note right of Banda::asignarInstrumentos
   Creo que este método debería 
