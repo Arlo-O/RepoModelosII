@@ -1,0 +1,21 @@
+@startuml BandaUml
+
+class Banda {
+    numIntegrantes : Integer
+    Integrantes : List<Musico>
+
+    void generarIntegrantes()
+    string afinarInstrumentos()
+    string tocarInstrumentos()
+    void asignarInstrumentos()
+}
+
+
+
+
+
+note right of Banda::asignarInstrumentos
+  Creo que este método debería 
+  ir en la clase Musico
+end note
+@enduml
