@@ -53,8 +53,4 @@ Instrumento <|.. InstrumentoViento
 Instrumento <|.. InstrumentoPercusion
 Instrumento <|.. InstrumentoElectrico
 
-note right of Banda::asignarInstrumentos
-  Creo que este método debería 
-  ir en la clase Musico
-end note
 @enduml
