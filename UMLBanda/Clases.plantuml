@@ -1,7 +1,7 @@
 @startuml BandaClasesUml
 
 class Banda {
-    numIntegrantes : Integer
+    Instrumentos : List<Instrumento>
     Integrantes : List<Musico>
 
     void generarIntegrantes()
@@ -52,10 +52,7 @@ enum NombresMusicos {
 
 class Musico {
   Nombre : string
-  instrumentoAsignado : Instrumento
-
-  void asignacionInstrumento()
-  void tocarInstrumento()
+  void tocarInstrumento(instrumento Instrumento)
 }
 
 enum InstrumentosCuerda{
@@ -97,8 +94,9 @@ enum InstrumentosElectrico{
 
 
 Banda o-- Musico
-Musico *-- Instrumento
+Banda o-- Instrumento
 Musico <-- NombresMusicos
+Instrumento <|.. Musico
 Instrumento <|.. InstrumentoCuerda
 Instrumento <|.. InstrumentoViento
 Instrumento <|.. InstrumentoPercusion
