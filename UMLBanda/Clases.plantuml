@@ -11,30 +11,35 @@ class Banda {
 
 interface Instrumento {
   void afinarInstrumento()
+  void tocarInstrumento()
 }
 
 class InstrumentoCuerda {
   nombreInstrumento : string
 
   void afinarInstrumento()
+  void tocarInstrumento()
 }
 
 class InstrumentoViento {
   nombreInstrumento : string
 
   void afinarInstrumento()
+  void tocarInstrumento()
 }
 
 class InstrumentoPercusion {
   nombreInstrumento : string
 
   void afinarInstrumento()
+  void tocarInstrumento()
 }
 
 class InstrumentoElectrico{
   nombreInstrumento : string
 
   void afinarInstrumento()
+  void tocarInstrumento()
 }
 
 enum NombresMusicos {
@@ -53,6 +58,7 @@ enum NombresMusicos {
 class Musico {
   Nombre : string
   void tocarInstrumento(instrumento Instrumento)
+  void afinarInstrumento(instrumento Instrumento)
 }
 
 enum InstrumentosCuerda{

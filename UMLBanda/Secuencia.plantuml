@@ -2,16 +2,22 @@
 
 Banda -> Musico ++: generarIntegrantes()
 Musico -> NombresMusicos ++: Musico()
-return nombre
-Musico -> Instrumento ++: asignarInstrumento()
+return nombreRandom
+return listaMusicos[i] = musico
+Banda -> Instrumento ++: generarInstrumento()
 Instrumento -> enumInstrumentos ++: Instrumento()
 return instrumentoRandom
-return instrumetnoAsignado
-return listadoIntegrantes
+return ListaInstrumentos[i] = instrumento
 
-Banda -> Instrumento ++: afinarInstrumentos()
-return "La banda ha afinado"
+Banda -> Musico ++: afinarInstrumentos()
+Musico -> Instrumento++: afinar()
+return "Instrumento afinado"
+return "El musico afino instrumento"
+
 Banda -> Musico ++: tocarInstrumentos()
-return "Termino el toque"
+Musico -> Instrumento++: tocar()
+return "Instrumento tocandose"
+return "El musico esta tocando el instrumento"
+
 
 @enduml
