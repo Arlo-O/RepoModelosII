@@ -1,0 +1,17 @@
+@startuml BandaSecuenciaUML
+
+Banda -> Musico ++: generarIntegrantes()
+Musico -> NombresMusicos ++: Musico()
+return nombre
+Musico -> Instrumento ++: asignarInstrumento()
+Instrumento -> enumInstrumentos ++: Instrumento()
+return instrumentoRandom
+return instrumetnoAsignado
+return listadoIntegrantes
+
+Banda -> Instrumento ++: afinarInstrumentos()
+return "La banda ha afinado"
+Banda -> Musico ++: tocarInstrumentos()
+return "Termino el toque"
+
+@enduml

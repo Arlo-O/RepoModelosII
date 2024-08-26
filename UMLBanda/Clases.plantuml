@@ -1,4 +1,4 @@
-@startuml BandaUml
+@startuml BandaClasesUml
 
 class Banda {
     numIntegrantes : Integer
@@ -37,6 +37,19 @@ class InstrumentoElectrico{
   void afinarInstrumento()
 }
 
+enum NombresMusicos {
+  CARLOS
+  ANDREA
+  LUIS
+  MARTA
+  DIEGO
+  ANA
+  JORGE
+  SOFIA
+  PEDRO
+  LAURA
+}
+
 class Musico {
   Nombre : string
   instrumentoAsignado : Instrumento
@@ -45,12 +58,54 @@ class Musico {
   void tocarInstrumento()
 }
 
+enum InstrumentosCuerda{
+  Guitarra
+  Violín
+  Arpa
+  Bajo
+  Ukelele
+  Mandolina
+}
+
+enum InstrumentosViento{
+  Flauta
+  Saxofón
+  Trompeta
+  Clarinete
+  Oboe
+  Trombón
+}
+
+enum InstrumentosPercusion{
+  Batería
+  Timbal
+  Cajón
+  Bongos
+  Marimba
+  Pandereta
+}
+
+enum InstrumentosElectrico{
+  Guitarra Eléctrica
+  Bajo Eléctrico
+  Teclado
+  Sintetizadors
+  Theremín
+  Piano Eléctrico
+}
+
+
 
 Banda o-- Musico
 Musico *-- Instrumento
+Musico <-- NombresMusicos
 Instrumento <|.. InstrumentoCuerda
 Instrumento <|.. InstrumentoViento
 Instrumento <|.. InstrumentoPercusion
 Instrumento <|.. InstrumentoElectrico
+InstrumentoElectrico <-- InstrumentosElectrico
+InstrumentoCuerda <-- InstrumentosCuerda
+InstrumentoViento <-- InstrumentosViento
+InstrumentoPercusion <-- InstrumentosPercusion
 
 @enduml
