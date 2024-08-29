@@ -15,7 +15,7 @@ class Banda:
     def generarIntegrantes(self):
         numIntegrantes = randint(1, 10)
         for i in range(numIntegrantes):
-            self.musicos.append(Musico((musicos)))
+            self.musicos.append(Musico(choice(musicos)))
 
             tipoInstrumento = randint(1,4)
             match tipoInstrumento:
