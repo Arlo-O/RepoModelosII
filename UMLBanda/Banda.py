@@ -34,7 +34,7 @@ class Banda:
         print("Se han afinado todos los instrumentos")
 
     def tocarInstrumentos(self):
-        for i, musico in enumerate(self.integrantes):
+        for i, musico in enumerate(self.musicos):
             musico.tocarInstrumento(self.instrumentos[i])
         print("La banda ha tocado todos los instrumentos")
 
