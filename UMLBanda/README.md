@@ -13,3 +13,4 @@ Se muestra que primero se genera el musico que acetó unirse a la banda, por con
 Desarrollado por: 
  - Arlo Nicolas Ocampo Galleo - 20221020104
  - Juan Jesus Poveda Avila - 20202020128
+ - Brayan Stiven Galindo Suesca - 20212020133
