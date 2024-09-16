@@ -1,4 +1,4 @@
-def dividirRecursiva(dividendo : float, divisor : float, precision: int):
+def dividirDeclarativa(dividendo : float, divisor : float, precision: int):
     if dividendo < divisor:
         if precision == 0:
             return 0
@@ -7,7 +7,7 @@ def dividirRecursiva(dividendo : float, divisor : float, precision: int):
         return dividirRecursiva(dividendo-divisor, divisor, precision) + 1
     
 
-def dividirDeclarativa(dividendo : float, divisor : float) -> float:
+def dividirImperativa(dividendo : float, divisor : float) -> float:
     precision = 10
     cociente = 0
     while dividendo >= divisor: #Parte entera de la división
