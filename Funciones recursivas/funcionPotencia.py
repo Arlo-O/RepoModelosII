@@ -5,10 +5,10 @@ def potenciaDeclarativa(base : int, exponente : int):
         return base
     
     elif exponente > 0:
-        return base * potenciaRecursiva(base, exponente-1)
+        return base * potenciaDeclarativa(base, exponente-1)
     
     else: 
-        return 1/(potenciaRecursiva(base, -exponente))
+        return 1/(potenciaDeclarativa(base, -exponente))
 
 print(potenciaDeclarativa(2, 3))
 print(potenciaDeclarativa(5, -2))
