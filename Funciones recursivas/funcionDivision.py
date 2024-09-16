@@ -2,9 +2,9 @@ def dividirDeclarativa(dividendo : float, divisor : float, precision: int):
     if dividendo < divisor:
         if precision == 0:
             return 0
-        return 0.1 * (dividirRecursiva(dividendo*10-divisor, divisor, precision -1) + 1)
+        return 0.1 * (dividirDeclarativa(dividendo*10-divisor, divisor, precision -1) + 1)
     if divisor >= divisor:
-        return dividirRecursiva(dividendo-divisor, divisor, precision) + 1
+        return dividirDeclarativa(dividendo-divisor, divisor, precision) + 1
     
 
 def dividirImperativa(dividendo : float, divisor : float) -> float:
@@ -28,8 +28,8 @@ def dividirImperativa(dividendo : float, divisor : float) -> float:
     
     return cociente + decimales
 
-print(dividirDeclarativa(20, 3))
+print(dividirImperativa(20, 3))
 
-print(dividirRecursiva(20, 3, 10))
+print(dividirDeclarativa(20, 3, 10))
 
     
