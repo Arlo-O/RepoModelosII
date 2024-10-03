@@ -2,18 +2,19 @@ import random
 def ejecutar():
     cicloJuego(crearBaraja(),[],[])
 
-def cicloJuego(baraja, manoJugador, manoDelaer):
+def cicloJuego(baraja, manoJugador, manoDealer):
     random.shuffle(baraja)
 
-    if len(manoJugador) == 0 and len(manoDelaer) == 0:
-        baraja, manoJugador, manoDelaer = repartirCartas(baraja,manoJugador,manoDelaer)# cambiar
+    repartirCartas(baraja,manoJugador,manoDealer)
+    turnoJugador(baraja, manoJugador)
+    turnoDealer(baraja, manoDealer)
     
-    baraja, manoJugador = turnoJugador(baraja, manoJugador)#cambiar
     if calcularPuntaje(manoJugador) <= 21:
-        baraja, manoDelaer, = turnoDealer(baraja, manoDelaer)#cambiar
-    
-    print(f"Mano del dealer: {manoDelaer}, su puntaje es: {calcularPuntaje(manoDelaer)}")
-    print(resultado(manoJugador, manoDelaer))
+        turnoDealer(baraja, manoDealer)
+
+    print(f"Mano del dealer: {manoDealer}, su puntaje es: {calcularPuntaje(manoDealer)}")
+    print(resultado(manoJugador, manoDealer))
+
 
 def resultado(manoJugador:list, manoDealer:list):
     if calcularPuntaje(manoJugador) > 21:
@@ -72,4 +73,4 @@ def conteoMano(baraja : list) -> int:
         return 0
     return valorCarta(baraja[0][0]) + conteoMano(baraja[1:])
 
-ejercutar()
+ejecutar()
