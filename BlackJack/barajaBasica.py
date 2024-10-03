@@ -12,13 +12,13 @@ def cicloJuego(baraja, manoJugador, manoDealer):
     if calcularPuntaje(manoJugador) <= 21:
         turnoDealer(baraja, manoDealer)
 
-    print(f"Mano del dealer: {manoDealer}, su puntaje es: {calcularPuntaje(manoDealer)}")
+    print(f"Mano del dealer: {manoDealer}, puntaje dealer es: {calcularPuntaje(manoDealer)}\n")
     print(resultado(manoJugador, manoDealer))
 
 
 def resultado(manoJugador:list, manoDealer:list):
     if calcularPuntaje(manoJugador) > 21:
-        return f"Se paso, puntaje: {calcularPuntaje(manoJugador)}, perdío, su mano era: {manoJugador}"
+        return f"Usted Se paso, puntaje: {calcularPuntaje(manoJugador)}, perdío, su mano era: {manoJugador}"
     elif calcularPuntaje(manoDealer) > 21 or calcularPuntaje(manoJugador) > calcularPuntaje(manoDealer):
         return f"Ha ganado, con un puntaje de : {calcularPuntaje(manoJugador)} sobre el dealer con puntaje {calcularPuntaje(manoDealer)}"
     elif calcularPuntaje(manoJugador) == calcularPuntaje(manoDealer):
